@@ -1,0 +1,77 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 1% 5%;
+}
+.navbar h1{
+  color: black;
+}
+.contacto{
+  display:flex;
+  justify-content: space-evenly;
+  flex-grow: 2;
+}
+.contacto p{
+  font-size: 20px;
+  /* border-style: solid;
+  border-radius: 8px;
+  padding: 0.5% 1%;
+  border-width: 1px;
+  border-color: rgb(179, 176, 176); */
+  color: rgb(58, 57, 57);
+  padding-bottom: 11px;
+  
+}
+.contacto p:hover{
+
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropdown__h5 {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .modal{
+      position: relative;
+      z-index: 1;
+  }

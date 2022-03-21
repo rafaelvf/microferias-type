@@ -1,0 +1,22 @@
+.filters{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin:0% 10%;
+    padding:2%;
+    justify-content: space-between;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgb(179, 176, 176);
+    align-items: center;
+    width: 80%;
+    box-shadow: 4px 4px rgb(243, 240, 240);
+}
+.filter_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.select_categoria{
+    height: 35px;
+}

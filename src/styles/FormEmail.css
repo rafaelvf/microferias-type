@@ -1,0 +1,54 @@
+.formEmail{
+    border-style: solid;
+    border-width: 1px;
+    width: 30%;
+    /* height: 85vh; */
+    margin: auto;
+    border-radius: 4px;
+    border-color: rgb(204, 204, 204);
+    align-items: center;
+    box-shadow: 10px 10px rgb(238, 236, 236);
+    padding: 2%;
+    margin-top: 2%;
+}
+
+.formEmail h1{
+    text-align: center;
+    font-size: 1.5rem;
+   
+}
+.formEmail h5{
+    margin-top: 3%;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    color: rgb(44, 43, 43);
+}
+.formEmail h6{
+    margin: 5% 9%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(88, 87, 87);
+}
+label{
+    margin-left: 10%;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(26, 25, 25);
+}
+.button{
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 10%;
+    color: white;
+    background-color: black;
+    margin-top: 2%;
+    border-radius: 2px;
+}
+.button p{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    padding: 2% 0%;
+}
