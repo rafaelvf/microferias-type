@@ -30,7 +30,7 @@ const Card:React.FC =()=>{
                 <Link to={`/detalles/${i._id}`} key={i._id} className='link'>
             <div className='container'>
             <div className="foto">
-                <img src={m} alt=''></img>
+                <img src={i.image} alt=''></img>
             </div>
             <div>
                 <h1 className='blog-post__title'>{i.name}</h1>

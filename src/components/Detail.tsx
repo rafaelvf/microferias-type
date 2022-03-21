@@ -13,7 +13,8 @@ const Detail:React.FC =()=>{
         date:string,
         address:string,
         description:string,
-        categories:[]
+        categories:[],
+        image:string
     }
     const {id}=useParams();
     const dispatch=useDispatch();
@@ -30,7 +31,7 @@ const Detail:React.FC =()=>{
     console.log(feriaFiltrada,"a")
     return feria.length && (
         <div className='details'>
-            <img src={m} alt=''></img>
+            <img src={feriaFiltrada.image} alt=''></img>
             <h1>{feriaFiltrada.name}</h1>
             <span>{dateFormat(feriaFiltrada.date,"d, mmmm, yyyy")}</span>
             <span>{feriaFiltrada.address}</span>

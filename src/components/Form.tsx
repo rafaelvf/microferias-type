@@ -15,7 +15,6 @@ const Form:React.FC =()=>{
         name:string;
         date:string;
         city:string;
-        image:string;
         description:string;
     }
 
@@ -23,9 +22,50 @@ const Form:React.FC =()=>{
         name:"",
         date:"",
         city:"",
-        image:"",
         description:"",
     })
+
+
+    const [file,setFile]=useState<any>({})
+
+    function handleImageChange(e:any){
+        const pic= e.target.files[0]
+        setFile(pic)
+    }
+
+console.log(file,"image3")
+    
+    const fileUpload = async (file:string)=>{
+
+        const formData = new FormData();
+        formData.append("file",file)
+        formData.append("upload_preset","plv78cxx")
+
+        try {
+            const resp = await fetch('https://api.cloudinary.com/v1_1/daju1hmqe/image/upload', {
+                method: 'POST',
+                body: formData,
+            });
+            const cloudResp = await resp.json();
+            console.log('url:', cloudResp.secure_url)
+            return cloudResp.secure_url;
+            // if(resp.ok){
+            //     const cloudResp = await resp.json();
+            //     console.log('url:', cloudResp.secure_url)
+            //     return cloudResp.secure_url;
+                
+            // }else{
+            //     throw await resp.json();
+            // }
+        } catch (error) {
+            console.log(error)
+        }
+        
+
+            
+
+        
+    }
 
     const [categories, setCategorias]=useState<string[]>([]);
 
@@ -44,6 +84,8 @@ const Form:React.FC =()=>{
         setCoordinates(ll)
     }
     console.log(coordinates,"address")
+
+
 
     function handleChange(e:any){
         setState(prevState=>{
@@ -71,38 +113,43 @@ const Form:React.FC =()=>{
         name:String,
         date:String,
         city:String,
-        image:String,
+        image:any,
         description:String,
         categories:string[],
         address:String,
         coordinates:{}
     }
 
-    const post1:Post1={
-        name:state.name,
-        date:state.date,
-        city:state.city,
-        image:state.image,
-        description:state.description,
-        categories:categories,
-        address:address,
-        coordinates:coordinates
-        }
+    
 
             
 
     async function handleSubmit(e:React.FormEvent){
         e.preventDefault()
 
-        if(!state.name || !state.date || !state.city || !state.image || !state.description || !categories.length || !address ){
+        if(!state.name || !state.date || !state.city || !state.description || !categories.length || !address ){
             alert("Por favor llenar todos los campos")
         } else{
+
+            const url = await fileUpload(file)
+
+            const post1:Post1={
+                name:state.name,
+                date:state.date,
+                city:state.city,
+                image:url,
+                description:state.description,
+                categories:categories,
+                address:address,
+                coordinates:coordinates
+                }
 
             await axios.post(`${URLrequests}ferias`,post1)
             .then(res=>console.log(res))
             .catch(error=>{
                 console.log(error)
             })
+
             alert("Se ha creado correctamente!")
             setState(prevState=>{
                 return {
@@ -117,11 +164,11 @@ const Form:React.FC =()=>{
 
             setAdress("")
             setCategorias([])
+            console.log(post1,"post1")
         }
 
     }
 
-    console.log(post1,"post1")
 
     return (
         <div className='form'>
@@ -198,9 +245,7 @@ const Form:React.FC =()=>{
                 <h5>Imagen del evento</h5>
                     <input 
                         type='file'
-                        onChange={handleChange}
-                        name="image"
-                        value={state.image}
+                        onChange={handleImageChange}
                         className='input__file'
                     />
 
