@@ -3,7 +3,7 @@ import m from "../img/m.png"
 import "../styles/Detail.css";
 import { useParams } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
-import { GET_FERIA } from "../redux/actions";
+import { GET_FERIA} from "../redux/actions";
 import dateFormat from "dateformat";
 
 const Detail:React.FC =()=>{
@@ -18,6 +18,7 @@ const Detail:React.FC =()=>{
     }
     const {id}=useParams();
     const dispatch=useDispatch();
+
 
     useEffect(()=>{
         dispatch(GET_FERIA(id))

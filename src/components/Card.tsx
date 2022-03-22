@@ -32,7 +32,7 @@ const Card:React.FC =()=>{
             <div className="foto">
                 <img src={i.image} alt=''></img>
             </div>
-            <div>
+            <div className="medio">
                 <h1 className='blog-post__title'>{i.name}</h1>
                 <div className='blog-post__date'>
                         
@@ -48,14 +48,14 @@ const Card:React.FC =()=>{
                 </div>
                 <div className="link2">
                         <div className="fb">
-                        <FacebookShareButton url={`https://flamboyant-golick-d7cb40.netlify.app/detail/${i._id}`} quote='Hola, quiero compartir este evento'>
+                        <FacebookShareButton url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`} quote='Hola, quiero compartir este evento'>
                             <FacebookIcon className="share" round={true} size='1em' />
                         </FacebookShareButton>
                         </div>
                         <div>
                         <WhatsappShareButton
                             title='Hola, te comparto este evento, te pueda interesar!'
-                            url={`https://flamboyant-golick-d7cb40.netlify.app/detail/${i._id}`}>
+                            url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}>
                             <WhatsappIcon className="share" round={true} size='1em' />
                         </WhatsappShareButton>
                         </div>

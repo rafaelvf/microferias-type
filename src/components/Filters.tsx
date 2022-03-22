@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import "../styles/Filters.css"
 import { useDispatch } from "react-redux";
-import { GET_NOMBRE,GET_DIRECCION,GET_CATEGORIA } from "../redux/actions";
+import { GET_NOMBRE,GET_DIRECCION,GET_CATEGORIA} from "../redux/actions";
 import categorias from "../categorias";
 
 
@@ -27,7 +27,7 @@ const Filters:React.FC = ()=>{
     
     const dispatch=useDispatch();
     const dispatch2=useDispatch();
-    const dispatch3=useDispatch();
+    const dispatch3=useDispatch();   
 
     useEffect(()=>{
         dispatch(GET_NOMBRE(nombre))        
@@ -75,7 +75,7 @@ const Filters:React.FC = ()=>{
             <div className="filter_div">
                 <select name="categoria" onChange={handleChange2} className="select_categoria">
 
-                    <option selected ></option>
+                    <option disabled></option>
 
                     {categorias.map((i:any)=><option value={i}>{i}</option>)}
                     
