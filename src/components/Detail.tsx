@@ -1,44 +1,41 @@
 import React, { useEffect } from "react";
-import m from "../img/m.png"
 import "../styles/Detail.css";
 import { useParams } from "react-router-dom";
-import { useDispatch,useSelector } from "react-redux";
-import { GET_FERIA} from "../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { GET_FERIA } from "../redux/actions";
 import dateFormat from "dateformat";
 
-const Detail:React.FC =()=>{
+const Detail: React.FC = () => {
+  interface Feria {
+    name: string;
+    date: string;
+    address: string;
+    description: string;
+    categories: [];
+    image: string;
+  }
+  const { id } = useParams();
 
-    interface Feria {
-        name:string,
-        date:string,
-        address:string,
-        description:string,
-        categories:[],
-        image:string
-    }
-    const {id}=useParams();
-    const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(GET_FERIA(id));
+  }, []);
 
-    useEffect(()=>{
-        dispatch(GET_FERIA(id))
-    },[])
-    
-    const {feria} = useSelector((state:any)=>state.allFerias)
-    const feriaFiltrada:Feria = feria[0]
+  const { feria } = useSelector((state: any) => state.allFerias);
+  const feriaFiltrada: Feria = feria[0];
 
-    console.log(id,"id")
-    console.log(feria,"ferias")
-    console.log(feriaFiltrada,"a")
-    return feria.length && (
-        <div className='details'>
-            <img src={feriaFiltrada.image} alt=''></img>
-            <h1>{feriaFiltrada.name}</h1>
-            <span>{dateFormat(feriaFiltrada.date,"d, mmmm, yyyy")}</span>
-            <span>{feriaFiltrada.address}</span>
-            <p> {feriaFiltrada.description}</p>
-        </div>
+  return (
+    feria.length && (
+      <div className="details">
+        <img src={feriaFiltrada.image} alt=""></img>
+        <h1>{feriaFiltrada.name}</h1>
+        <span>{dateFormat(feriaFiltrada.date, "d, mmmm, yyyy")}</span>
+        <span>{feriaFiltrada.address}</span>
+        <p> {feriaFiltrada.description}</p>
+      </div>
     )
-}
+  );
+};
 
 export default Detail;

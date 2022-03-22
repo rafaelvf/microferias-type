@@ -1,85 +1,76 @@
 import React from "react";
-import m from "../img/m.png"
-import { Link } from 'react-router-dom';
-import "../styles/Card.css"
+import { Link } from "react-router-dom";
+import "../styles/Card.css";
 import { useEffect } from "react";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { GET_FERIAS } from "../redux/actions";
-import dateFormat from 'dateformat';
-import { FacebookIcon, FacebookShareButton, WhatsappIcon, WhatsappShareButton } from "react-share";
+import dateFormat from "dateformat";
+import {
+    FacebookIcon,
+    FacebookShareButton,
+    WhatsappIcon,
+    WhatsappShareButton,
+} from "react-share";
 
-const Card:React.FC =()=>{
+const Card: React.FC = () => {
+  const dispatch = useDispatch();
 
-    const dispatch=useDispatch()
+  useEffect(() => {
+    dispatch(GET_FERIAS());
+  }, []);
 
-    useEffect(()=>{
-        dispatch(GET_FERIAS())
-    },[])
-    
-    const {ferias}=useSelector((state:any)=>state.allFerias)
-    
-    
-    console.log(ferias,"ferias")
-    return (
-        <div className="todo">
+  const { ferias } = useSelector((state: any) => state.allFerias);
 
-
-            { ferias && ferias.map((i:any)=>(
-
-
-                <Link to={`/detalles/${i._id}`} key={i._id} className='link'>
-            <div className='container'>
-            <div className="foto">
-                <img src={i.image} alt=''></img>
-            </div>
-            <div className="medio">
-                <h1 className='blog-post__title'>{i.name}</h1>
-                <div className='blog-post__date'>
-                        
-                        <span>{dateFormat(i.date,"d, mmmm, yyyy")}</span>
-                        <span>{i.address}</span>
+  return (
+    <div className="todo">
+      {ferias &&
+        ferias.map((i: any) => (
+          <Link to={`/detalles/${i._id}`} key={i._id} className="link">
+            <div className="container">
+              <div className="foto">
+                <img src={i.image} alt=""></img>
+              </div>
+              <div className="medio">
+                <h1 className="blog-post__title">{i.name}</h1>
+                <div className="blog-post__date">
+                  <span>{dateFormat(i.date, "d, mmmm, yyyy")}</span>
+                  <span>{i.address}</span>
                 </div>
-            </div>
-            <div className="description_link">
+              </div>
+              <div className="description_link">
                 <div>
-                    <p className='blog-post__text'>
-                        {i.description}
-                    </p>
+                  <p className="blog-post__text">{i.description}</p>
                 </div>
                 <div className="link2">
-                        <div className="fb">
-                        <FacebookShareButton url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`} quote='Hola, quiero compartir este evento'>
-                            <FacebookIcon className="share" round={true} size='1em' />
-                        </FacebookShareButton>
-                        </div>
-                        <div>
-                        <WhatsappShareButton
-                            title='Hola, te comparto este evento, te pueda interesar!'
-                            url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}>
-                            <WhatsappIcon className="share" round={true} size='1em' />
-                        </WhatsappShareButton>
-                        </div>
+                  <div className="fb">
+                    <FacebookShareButton
+                      url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}
+                      quote="Hola, quiero compartir este evento"
+                    >
+                      <FacebookIcon className="share" round={true} size="1em" />
+                    </FacebookShareButton>
+                  </div>
+                  <div>
+                    <WhatsappShareButton
+                      title="Hola, te comparto este evento, te pueda interesar!"
+                      url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}
+                    >
+                      <WhatsappIcon className="share" round={true} size="1em" />
+                    </WhatsappShareButton>
+                  </div>
                 </div>
+              </div>
             </div>
-            
-
-        </div>
-        </Link>
-            )  )
-        }
-
-    
-
-
-
-        </div>
-    )
-}
+          </Link>
+        ))}
+    </div>
+  );
+};
 
 export default Card;
 
-
-{/* <Link to={'/detalles'} className='link'>
+{
+  /* <Link to={'/detalles'} className='link'>
             <div className='container'>
             <div>
                 <img src={m} alt=''></img>
@@ -100,4 +91,5 @@ export default Card;
             
 
         </div>
-        </Link> */}
+        </Link> */
+}
