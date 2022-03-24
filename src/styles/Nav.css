@@ -94,7 +94,7 @@
       display: inline;
     }
     .menu-bars{
-      margin-right: 2rem;
+      margin-right: 0.6rem;
       font-size: 2rem;
       display: inline;
       color: rgb(154, 154, 155);
@@ -103,7 +103,7 @@
     
     .nav-menu {
       background-color: #060b26;
-      width: 250px;
+      width: 170px;
       height: 100vh;
       display: flex;
       justify-content: center;

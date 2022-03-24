@@ -293,7 +293,7 @@ padding-left: 3%;
         margin-bottom: 4%;
         font-size: 13px;
         color: rgba(0,0,0,.7);
-        
+        line-height: 1.3em;
     }
     .description_link{
         display: grid;
@@ -329,6 +329,7 @@ padding-left: 3%;
         width: 180px;
         border-radius: 9px;
         padding: 4% 0%;
+        margin-top: 2%;
     }
     .medio{
         padding-left: 0%;
@@ -355,7 +356,7 @@ padding-left: 3%;
         margin-bottom: 4%;
         font-size: 13px;
         color: rgba(0,0,0,.7);
-        
+        line-height: 1.3em;
     }
     .description_link{
         display: grid;
