@@ -3,7 +3,8 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 4px;
-    box-shadow: 4px 4px gray;
+    border-color: rgb(211, 211, 211);
+    box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.274);
 }
 .details img{
     width: 27%;
@@ -27,4 +28,109 @@
     margin-right: 3%;
     margin-bottom: 2%;
     font-size: 18px;
+}
+
+@media screen and (min-width:751px) and (max-width:900px) {
+    .details{
+        margin: 5% 30%;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(211, 211, 211);
+        box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.274);
+    }
+    .details img{
+        width: 55%;
+        margin: 3% auto;
+        display: block;
+    }
+    .details h1{
+        margin-left: 10%;
+        text-transform: uppercase;
+        font-size: 50px;
+    }
+    .details span{
+        display: block;
+        margin-left: 10%;
+        color: red;
+        font-size: 20px;
+    }
+    .details p{
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 2%;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width:500px) and (max-width:750px) {
+    .details{
+        margin: 5% 26%;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(211, 211, 211);
+        box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.274);
+    }
+    .details img{
+        width: 55%;
+        margin: 3% auto;
+        display: block;
+    }
+    .details h1{
+        margin-left: 10%;
+        text-transform: uppercase;
+        font-size: 35px;
+    }
+    .details span{
+        display: block;
+        margin-left: 10%;
+        color: red;
+        font-size: 16px;
+    }
+    .details p{
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (min-width:300px) and (max-width:499px) {
+    .details{
+        margin: 5% 10%;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(211, 211, 211);
+        box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.274);
+    }
+    .details img{
+        width: 55%;
+        margin: 3% auto;
+        display: block;
+    }
+    .details h1{
+        margin-left: 10%;
+        text-transform: uppercase;
+        font-size: 35px;
+    }
+    .details span{
+        display: block;
+        margin-left: 10%;
+        color: red;
+        font-size: 16px;
+    }
+    .details p{
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+        font-size: 17px;
+    }
+
 }

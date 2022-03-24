@@ -86,6 +86,10 @@
     .contacto{
       display: none;
     }
+    .navbar h1{
+      color: black;
+      font-size: 35px;
+    }
     .barra{
       display: inline;
     }
