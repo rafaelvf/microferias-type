@@ -13,6 +13,8 @@ import {
 } from "react-share";
 
 const Card: React.FC = () => {
+
+  console.log(process.env)
   const dispatch = useDispatch();
 
   useEffect(() => {

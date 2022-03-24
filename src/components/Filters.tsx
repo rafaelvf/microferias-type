@@ -69,7 +69,7 @@ const Filters: React.FC = () => {
           onChange={handleChange2}
           className="select_categoria"
         >
-          <option disabled></option>
+          
 
           {categorias.map((i: any) => (
             <option value={i}>{i}</option>

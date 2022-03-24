@@ -1,4 +1,5 @@
 const categorias:string[] = [
+    "",
 "Alimentos y Bebidas",
 "Alternativo",
 "Arte",
