@@ -289,8 +289,8 @@ padding-left: 3%;
     }
     .foto img{
         width: 100%;
-        border-radius: 10px;
-        padding: 4% 0%;
+        border-radius: 4px;
+        
     }
     .medio{
         padding-left: 0%;
@@ -354,8 +354,7 @@ padding-left: 3%;
     }
     .foto img{
         width: 100%;
-        border-radius: 13px;
-        padding: 4% 0%;
+        border-radius: 4px;
         margin-top: 2%;
     }
     .medio{
@@ -402,10 +401,7 @@ padding-left: 3%;
          
     }
     .fb{
-        margin-right: 10px;
+        margin-right: 30px;
     }
-    .share{
-        margin-right: 4px;
-        margin-left: 5px;
-    }
+    
 }
