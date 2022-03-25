@@ -40,7 +40,7 @@ const Card: React.FC = () => {
                 </div>
               </div>
               <div className="description_link">
-                <div>
+                <div className="parrafo">
                   <p className="blog-post__text">{i.description}</p>
                 </div>
                 <div className="link2">
