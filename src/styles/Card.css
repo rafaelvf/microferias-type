@@ -398,10 +398,13 @@ padding-left: 3%;
     }
     .link2{
         display: flex; 
-         
+         flex-shrink: 0;
     }
     .fb{
         margin-right: 30px;
     }
-    
+    .share{
+        width: 1em;
+        
+    }
 }
