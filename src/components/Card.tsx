@@ -48,6 +48,7 @@ const Card: React.FC = () => {
                     <FacebookShareButton
                       url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}
                       quote="Hola, quiero compartir este evento"
+                      className="logo"
                     >
                       <FacebookIcon className="share" round={true} size="1em" />
                     </FacebookShareButton>
@@ -56,7 +57,7 @@ const Card: React.FC = () => {
                     <WhatsappShareButton
                       title="Hola, te comparto este evento, te pueda interesar!"
                       url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}
-                    >
+                    className="logo">
                       <WhatsappIcon className="share" round={true} size="1em" />
                     </WhatsappShareButton>
                   </div>
