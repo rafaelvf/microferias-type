@@ -46,7 +46,7 @@ const Filters: React.FC = () => {
             onChange={handleChange}
             name="nombre"
             value={nombre}
-            placeholder="Filtra por nombre"
+            placeholder="Buscar feria"
           />
         </form>
       </div>
@@ -58,7 +58,7 @@ const Filters: React.FC = () => {
             onChange={handleChange1}
             name="direccion"
             value={direccion}
-            placeholder="Filtra por direccion"
+            placeholder="Ciudad"
           />
         </form>
       </div>

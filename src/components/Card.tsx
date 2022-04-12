@@ -43,26 +43,33 @@ const Card: React.FC = () => {
                 <div className="parrafo">
                   <p className="blog-post__text">{i.description}</p>
                 </div>
-                <div className="link2">
-                  <div className="fb">
-                    <FacebookShareButton
-                      url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}
-                      quote="Hola, quiero compartir este evento"
-                      className="logo"
-                    >
-                      <FacebookIcon className="share" round={true} size="1em" />
-                    </FacebookShareButton>
-                  </div>
-                  <div>
-                    <WhatsappShareButton
-                      title="Hola, te comparto este evento, te pueda interesar!"
-                      url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}
-                    className="logo">
-                      <WhatsappIcon className="share" round={true} size="1em" />
-                    </WhatsappShareButton>
-                  </div>
-                </div>
+                
               </div>
+              <div className="botones">
+                <div className="botonEmprendedor">
+                  Registrate
+                </div>
+                {/* <div className="link2">
+                  <div>share:</div>
+                    <div className="fb">
+                      <FacebookShareButton
+                        url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}
+                        quote="Hola, quiero compartir este evento"
+                        className="logo"
+                      >
+                        <FacebookIcon className="share" round={true} size="1em" />
+                      </FacebookShareButton>
+                    </div>
+                    <div>
+                      <WhatsappShareButton
+                        title="Hola, te comparto este evento, te pueda interesar!"
+                        url={`https://serene-tesla-d68c65.netlify.app/detalles/${i._id}`}
+                      className="logo">
+                        <WhatsappIcon className="share" round={true} size="1em" />
+                      </WhatsappShareButton>
+                    </div>
+                  </div> */}
+                </div>
             </div>
           </Link>
         ))}

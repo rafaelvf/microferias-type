@@ -17,15 +17,7 @@ html{
     margin-left: 10%;
     margin-top: 10%;
 }
-/* body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eee;
-    padding: 0 1.5rem;
-} */
+
 .blog-post{
     width: 100%;
     padding: 1rem .1rem ;
@@ -74,23 +66,8 @@ html{
 
 
 
-.blog-post__cta{
-    display: inline-block;
-    padding: 1.5rem 3rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: #fff;
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    border-radius: .8rem;
-    text-decoration: none;
-    height: 35%;
-    width: 30%;
-    align-self: center;
-}
-.blog-post__cta:hover{
-    background-image: linear-gradient(to right,  #00f2fe 0%, #4facfe 100%);
-}
+
+
 
 @media screen and (max-width:1068px){
     .blog-post{
@@ -125,7 +102,7 @@ html{
 }
 .container{
     display: grid;
-    grid-template-columns: 170px 280px 1fr;
+    grid-template-columns: 170px 200px 1fr .3fr;
     margin-top: 2%;
     justify-content: space-between;
     border-style: solid;
@@ -133,19 +110,15 @@ html{
     border-width: 1px;
     border-color: rgb(211, 211, 211);
     align-items: center;
+    background-color: white;
     width: 100%;
     box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.103);
-    padding: 2% 1% 1% 1%;
+    padding: 2% 1% 2% 1%;
     transition: all .2s ease-in-out;
 }
 .container:hover{
     background-color: gainsboro;
     transform: scale(1.05);
-}
-img{
-    width: 90%;
-    border-radius: 2px;
-
 }
 .blog-post__title{
     font-size: 1rem;
@@ -155,14 +128,13 @@ img{
 }
 .blog-post__text{
     margin-bottom: 3%;
-    font-size: 16px;
+    font-size: .6rem;
     color: rgba(0,0,0,.7);
-    /* border-style: solid;
-    border-color: rgb(190, 36, 36); */
+    
 }
 .blog-post__date span{
     display: block;
-    color: rgba(0,0,0,.5);
+    color: rgba(255, 0, 0, 0.783);
     font-size: 17px;
     font-weight: 450;
     
@@ -174,14 +146,25 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 150px;
+    height: 100px;
+    padding-left: 15px;
 }
-.description_link{
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    object-fit: fill;
+}
+/* .description_link{
     display: grid;
     grid-template-rows: 75% 25%;
-}
+} */
 .link2{
     display: flex; 
-     
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
 }
 .fb{
     margin-right: 1%;
@@ -189,13 +172,32 @@ img{
 .medio{
 padding-left: 3%;
 }
-
+.botonEmprendedor{
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 1px black solid;
+    border-radius: 12px;
+    padding: 0.5rem 0rem;
+    margin: 0rem 0.5rem;
+    font-size: 13px;
+    color:#000000;
+}
+.botonEmprendedor:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+/* .botones{
+    display: flex;
+    flex-direction: column;
+} */
 
 @media screen and (min-width:950px) and (max-width:1100px) {
 
     .container{
         display: grid;
-        grid-template-columns: 170px 230px 1fr;
+        grid-template-columns: 170px 170px 1fr .3fr;
         margin-top: 2%;
         justify-content: space-between;
         border-style: solid;
@@ -218,18 +220,22 @@ padding-left: 3%;
     }
     .parrafo{
         margin-bottom: 10px;
+        
     }
     .fb{
         
         margin-right: 10px;
     }
+    .blog-post__text{        
+        font-size: .5rem;       
+          }
 }
 
 @media screen and (min-width:750px) and (max-width:949px) {
 
     .container{
         display: grid;
-        grid-template-columns: 150px 180px 1fr;
+        grid-template-columns: 150px 160px 1fr .3fr;
         margin-top: 2%;
         justify-content: space-between;
         border-style: solid;
@@ -250,13 +256,15 @@ padding-left: 3%;
         margin-left: 0px;
         
     }
-
+    .blog-post__title {
+        font-size: .8rem;
+       
+    }
     .blog-post__text{
         margin-bottom: 4%;
-        font-size: 14px;
+        font-size: .4rem;
         color: rgba(0,0,0,.7);
-        /* border-style: solid;
-        border-color: rgb(190, 36, 36); */
+        
     }
     .description_link{
         display: grid;
@@ -264,45 +272,62 @@ padding-left: 3%;
     }
     .link2{
         display: flex; 
-         flex-shrink: 0;
+         
     }
     .fb{
-        margin-right: 30px;
+        margin-right: 5px;
     }
     .logo{
         width: 1em;
     }
     .share{
-        width: 1em;
+        width: .7em;
         
+    }
+    .medio{
+        padding-left: 10px;
+    }
+    .botonEmprendedor{
+    
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        border: 1px black solid;
+        border-radius: 12px;
+        padding: 0.3rem .5rem;
+        margin: 0rem 0.5rem;
+        font-size: 13px;
+        color:#000000;
     }
 }
 
-@media screen and (min-width:550px) and (max-width:749px) {
-
+@media screen and (min-width:451px) and (max-width:749px) {
+    .todo{
+        margin: 0% 24% 1% 24%;
+    }
     .container{
         display: flex;
         flex-direction: column;
-        margin-top: 2%;
+        margin-top: 4%;
         justify-content: space-between;
         border-style: solid;
         border-radius: 8px;
         border-width: 1px;
-        border-color: rgb(211, 211, 211);
-        align-items: flex-start;
+        border-color: rgb(211, 211, 211);        
         width: 100%;
         box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.103);
-        padding: 2% 1% 2% 1%;
+        padding: 0% 0% 2% 0%;
         transition: all .2s ease-in-out;
     }
     .foto{
-        margin: 0% 5%;
-    }
-    .foto img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        border-radius: 4px;
-        
+        height: 100%;
+        padding-left: 0px;
     }
+   
     .medio{
         padding-left: 0%;
         display: flex;
@@ -353,10 +378,24 @@ padding-left: 3%;
         width: 1em;
         
     }
+    .botonEmprendedor{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px black solid;
+        border-radius: 12px;
+        padding: 0.3rem .5rem;
+        
+        font-size: 13px;
+        color:#000000;
+    }
+    
 }
-
-@media screen and (min-width:300px) and (max-width:549px) {
-
+@media screen and (min-width:300px) and (max-width:450px) {
+    .todo{
+        margin: 0% 22% 1% 22%;
+    }
     .container{
         display: flex;
         flex-direction: column;
@@ -365,29 +404,30 @@ padding-left: 3%;
         border-style: solid;
         border-radius: 8px;
         border-width: 1px;
-        border-color: rgb(211, 211, 211);
-        align-items: flex-start;
+        border-color: rgb(211, 211, 211);        
         width: 100%;
         box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.103);
-        padding: 2% 1% 2% 1%;
+        padding: 0% 0% 2% 0%;
         transition: all .2s ease-in-out;
     }
     .foto{
-       margin: 2% 5%;
-    }
-    .foto img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        border-radius: 4px;
-        
+        height: 100%;
+        padding-left: 0px;
     }
+   
     .medio{
         padding-left: 0%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         margin-bottom: 2%;
-        margin: 1% 5%;
+        margin: 3% 5%;
+        
         }
     .blog-post__title{
         font-size: .9rem;
@@ -395,10 +435,6 @@ padding-left: 3%;
         color:#000000;
         padding-bottom: 2%;
     }
-    /* .blog-post__date{
-        display: flex;
-        align-items: flex-start;
-    } */
     .blog-post__date span{
         display: block;
         color: rgba(250, 10, 10, 0.856);
@@ -419,6 +455,7 @@ padding-left: 3%;
         padding-bottom: 10%;
         margin: 1% 5%;
     }
+    
     .link2{
         display: flex; 
          flex-shrink: 0;
@@ -433,4 +470,18 @@ padding-left: 3%;
         width: 1em;
         
     }
+    .botonEmprendedor{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px black solid;
+        border-radius: 12px;
+        padding: 0.3rem .5rem;
+        
+        font-size: 13px;
+        color:#000000;
+    }
+    
 }
+
