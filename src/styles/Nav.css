@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding: 1% 5%;
+    
+    margin: 2% 10%;
 }
 .navbar h1{
   color: black;
@@ -12,7 +13,7 @@
 }
 .contacto{
   display:flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   flex-grow: 2;
 }
 .contacto p{

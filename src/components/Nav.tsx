@@ -5,6 +5,7 @@ import { GET_FERIAS } from "../redux/actions";
 import { useDispatch } from "react-redux";
 import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
+import cover from "../img/cover.jpg"
 
 const Nav:React.FC =()=>{
     const dispatch=useDispatch()
@@ -20,13 +21,13 @@ const Nav:React.FC =()=>{
     return (
         <>
         <div className="navbar">
-            
+                <img src={cover}/>
                 <Link to={'/'} className='link'><h1     onClick={handleClick}>MicroFerias</h1></    Link>
                             
                 <div className="contacto">
                 <Link to={'/formulario'} className='link'><p>Registra tu feria</p></Link>
-                <Link to={'/formularioEmprendimiento'} className='link'> <p>Registra tu emprendimiento</p></Link>
-                <Link to={'/formularioEmail'} className='link'><p>Registra tu email</p></Link>                    
+                {/* <Link to={'/formularioEmprendimiento'} className='link'> <p>Registra tu emprendimiento</p></Link> */}
+                {/* <Link to={'/formularioEmail'} className='link'><p>Registra tu email</p></Link>                     */}
                 </div>
                 
                 <Link to='#' className="menu-bars">

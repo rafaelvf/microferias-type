@@ -23,6 +23,8 @@ const Card: React.FC = () => {
 
   const { ferias } = useSelector((state: any) => state.allFerias);
 
+  
+
   return (
     <div className="todo">
       {ferias &&
@@ -46,9 +48,12 @@ const Card: React.FC = () => {
                 
               </div>
               <div className="botones">
+                <Link to={'/formularioEmprendimiento'} className="linkBotones">
                 <div className="botonEmprendedor">
+
                   Registrate
                 </div>
+                </Link>
                 {/* <div className="link2">
                   <div>share:</div>
                     <div className="fb">
